@@ -1,7 +1,10 @@
 class SteffensenIteration:
     def __init__(self, iterate_function):
+        # 迭代函数
         self.iterate_function = iterate_function
 
+    # 各种定义参见LinearSystemEquationSolution
+    # max 是最大迭代数
     def solve(self, init_x, absolute_error_limit=0.0001, relative_error_limit=None, stop_when_met='absolute',
               max=10000):
         stop = False

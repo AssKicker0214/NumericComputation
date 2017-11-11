@@ -34,6 +34,7 @@ def page_194_question_9():
 
 def page_229_question_6_1():
     # steffensen iterative function
+    print("\n ########## steffensen 算法 ##########")
     def fi(x):
         return (2.0 - math.e ** x + x ** 2) / 3
 
@@ -41,6 +42,7 @@ def page_229_question_6_1():
     si.solve(6, absolute_error_limit=0.00000001, stop_when_met='absolute')
 
     # newton function
+    print("\n ########## newton 算法 ##########")
     def f(x):
         return (2.0 - math.e ** x + x ** 2) / 3 - x
 
@@ -53,12 +55,14 @@ def page_229_question_6_1():
 
 def page_229_question_6_2():
     # steffensen
+    print("\n ########## steffensen 算法 ##########")
     def fi(x):
         return math.acos((x ** 2) / -10.0)
 
-    # si = SteffensenIteration(fi)
-    # si.solve(2, absolute_error_limit=0.00000001, stop_when_met='absolute')
+    si = SteffensenIteration(fi)
+    si.solve(2, absolute_error_limit=0.00000001, stop_when_met='absolute')
 
+    print("\n ########## newton 算法 ##########")
     def f(x):
         return x ** 2 + 10 * math.cos(x)
 
@@ -68,8 +72,8 @@ def page_229_question_6_2():
     ni = NewtonIteration(f, df)
     ni.solve(2, absolute_error_limit=0.00000001, stop_when_met='absolute')
 
-
-# page_193_question_6()
-# page_194_question_9()
-# page_229_question_6_1()
+# 以下是题目对应的程序运行入口
+page_193_question_6()
+page_194_question_9()
+page_229_question_6_1()
 page_229_question_6_2()
