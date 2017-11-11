@@ -1,5 +1,4 @@
-from core.JacobiIteration import JacobiIteration
-from core.IterationSolution import IterationSolution
+from core.LinearSystemEquationSolution import IterationSolution
 A = [
     [8.3, 2.1, -1.2, 0.5],
     [0.8, 10.2, 3.5, -1.8],
