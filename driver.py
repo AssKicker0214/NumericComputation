@@ -13,4 +13,5 @@ b = [-3.02, 4.79, -6.72, 8.89]
 # ji.solve(0.001)
 
 slt = IterationSolution(A, b)
-slt.solve(0.001, method='sor', relax_factor=1.)
+slt.solve(0.001, method='sor', relax_factor=1.25)
+
